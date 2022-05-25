@@ -1,0 +1,129 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/game.tscn" type="PackedScene" id=1]
+[ext_resource path="res://themes/theme.tres" type="Theme" id=3]
+[ext_resource path="res://scripts/Explore.gd" type="Script" id=4]
+
+[node name="Explore" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="game" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 0.8, 0.8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer2"]
+margin_right = 510.0
+margin_bottom = 327.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.06
+
+[node name="move" type="Button" parent="CanvasLayer/Control/VBoxContainer2"]
+margin_left = 227.0
+margin_top = 331.0
+margin_right = 282.0
+margin_bottom = 354.0
+size_flags_horizontal = 4
+text = "Move"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer2"]
+margin_left = 30.0
+margin_top = 358.0
+margin_right = 480.0
+margin_bottom = 377.0
+rect_min_size = Vector2( 450, 0 )
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer2/HBoxContainer"]
+margin_right = 300.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 300, 0 )
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/VBoxContainer2/HBoxContainer"]
+margin_left = 304.0
+margin_right = 450.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+columns = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/VBoxContainer2/HBoxContainer/GridContainer"]
+margin_right = 52.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Interval"
+align = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/VBoxContainer2/HBoxContainer/GridContainer"]
+margin_left = 56.0
+margin_right = 99.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Ease"
+align = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control/VBoxContainer2/HBoxContainer/GridContainer"]
+margin_left = 103.0
+margin_right = 146.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer2"]
+margin_left = 30.0
+margin_top = 381.0
+margin_right = 480.0
+margin_bottom = 560.0
+rect_min_size = Vector2( 450, 0 )
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.58
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer2/VBoxContainer"]
+margin_right = 450.0
+
+[node name="Container" type="ScrollContainer" parent="CanvasLayer/Control/VBoxContainer2/VBoxContainer"]
+margin_top = 4.0
+margin_right = 450.0
+margin_bottom = 138.0
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="list" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer2/VBoxContainer/Container"]
+margin_right = 450.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/VBoxContainer2/VBoxContainer"]
+margin_left = 177.0
+margin_top = 142.0
+margin_right = 273.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 80, 0 )
+size_flags_horizontal = 4
+text = "Main menu"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer2/VBoxContainer"]
+margin_top = 169.0
+margin_right = 450.0
+margin_bottom = 179.0
+rect_min_size = Vector2( 0, 10 )
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer2/move" to="." method="_on_move_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer2/VBoxContainer/Button" to="." method="_on_Button_pressed"]

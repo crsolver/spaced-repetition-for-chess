@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/chess.wav-2c15e369f5f30f507c62a4884bf2d48f.sample"
+
+[deps]
+
+source_file="res://sounds/chess.wav"
+dest_files=[ "res://.import/chess.wav-2c15e369f5f30f507c62a4884bf2d48f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

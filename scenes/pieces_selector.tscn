@@ -1,0 +1,247 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://sprites/white.png" type="Texture" id=1]
+[ext_resource path="res://sprites/white_king.png" type="Texture" id=2]
+[ext_resource path="res://sprites/dec.png" type="Texture" id=3]
+[ext_resource path="res://sprites/white_pawn.png" type="Texture" id=4]
+[ext_resource path="res://sprites/white_knight.png" type="Texture" id=5]
+[ext_resource path="res://sprites/queen.png" type="Texture" id=6]
+[ext_resource path="res://sprites/white_bishop.png" type="Texture" id=7]
+[ext_resource path="res://sprites/white_rook.png" type="Texture" id=8]
+[ext_resource path="res://scripts/pieces_selector.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 20 )
+
+[node name="pieces_selector" type="Node2D"]
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 0.388235, 0.447059, 0.278431, 1 )
+position = Vector2( 90, 30 )
+scale = Vector2( 0.748333, 0.748333 )
+z_index = 2
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 0.388235, 0.447059, 0.278431, 1 )
+position = Vector2( 150, 30 )
+scale = Vector2( 0.748333, 0.748333 )
+z_index = 2
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="."]
+modulate = Color( 0.388235, 0.447059, 0.278431, 1 )
+position = Vector2( 210, 30 )
+scale = Vector2( 0.748333, 0.748333 )
+z_index = 2
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5" type="Sprite" parent="."]
+modulate = Color( 0.388235, 0.447059, 0.278431, 1 )
+position = Vector2( 270, 30 )
+scale = Vector2( 0.748333, 0.748333 )
+z_index = 2
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite6" type="Sprite" parent="."]
+modulate = Color( 0.388235, 0.447059, 0.278431, 1 )
+position = Vector2( 330, 30 )
+scale = Vector2( 0.748333, 0.748333 )
+z_index = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.388235, 0.447059, 0.278431, 1 )
+position = Vector2( 30, 30 )
+scale = Vector2( 0.83, 0.83 )
+z_index = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pawn" type="Area2D" parent="."]
+process_priority = 1
+position = Vector2( 0, 20 )
+z_index = 3
+priority = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pawn"]
+process_priority = 1
+position = Vector2( 30, 10 )
+z_index = 3
+shape = SubResource( 1 )
+
+[node name="knight" type="Area2D" parent="."]
+process_priority = 1
+position = Vector2( 10, 50 )
+z_index = 3
+priority = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="knight"]
+process_priority = 1
+position = Vector2( 80, -20 )
+z_index = 3
+shape = SubResource( 1 )
+
+[node name="bishop" type="Area2D" parent="."]
+process_priority = 1
+position = Vector2( 10, 50 )
+z_index = 3
+priority = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bishop"]
+process_priority = 1
+position = Vector2( 140, -20 )
+z_index = 3
+shape = SubResource( 1 )
+
+[node name="rook" type="Area2D" parent="."]
+process_priority = 1
+position = Vector2( 10, 50 )
+z_index = 3
+priority = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rook"]
+process_priority = 1
+position = Vector2( 200, -20 )
+z_index = 3
+shape = SubResource( 1 )
+
+[node name="queen" type="Area2D" parent="."]
+process_priority = 1
+position = Vector2( 10, 50 )
+z_index = 3
+priority = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="queen"]
+process_priority = 1
+position = Vector2( 260, -20 )
+z_index = 3
+shape = SubResource( 1 )
+
+[node name="king" type="Area2D" parent="."]
+process_priority = 1
+position = Vector2( 10, 50 )
+z_index = 3
+priority = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="king"]
+process_priority = 1
+position = Vector2( 320, -20 )
+z_index = 3
+shape = SubResource( 1 )
+
+[node name="all" type="Area2D" parent="."]
+process_priority = 1
+position = Vector2( 70, 50 )
+z_index = 3
+priority = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="all"]
+process_priority = 1
+position = Vector2( 320, -20 )
+z_index = 3
+shape = SubResource( 1 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 210, 30 )
+scale = Vector2( 7, 1 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 30, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 90, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 150, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 210, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 270, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( 330, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( 390, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 30, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite16" type="Sprite" parent="."]
+
+[connection signal="mouse_entered" from="pawn" to="." method="_on_pawn_mouse_entered"]
+[connection signal="mouse_exited" from="pawn" to="." method="_on_pawn_mouse_exited"]
+[connection signal="mouse_entered" from="knight" to="." method="_on_knight_mouse_entered"]
+[connection signal="mouse_exited" from="knight" to="." method="_on_knight_mouse_exited"]
+[connection signal="mouse_entered" from="bishop" to="." method="_on_bishop_mouse_entered"]
+[connection signal="mouse_exited" from="bishop" to="." method="_on_bishop_mouse_exited"]
+[connection signal="mouse_entered" from="rook" to="." method="_on_rook_mouse_entered"]
+[connection signal="mouse_exited" from="rook" to="." method="_on_rook_mouse_exited"]
+[connection signal="mouse_entered" from="queen" to="." method="_on_queen_mouse_entered"]
+[connection signal="mouse_exited" from="queen" to="." method="_on_queen_mouse_exited"]
+[connection signal="mouse_entered" from="king" to="." method="_on_king_mouse_entered"]
+[connection signal="mouse_exited" from="king" to="." method="_on_king_mouse_exited"]
+[connection signal="mouse_entered" from="all" to="." method="_on_all_mouse_entered"]
+[connection signal="mouse_exited" from="all" to="." method="_on_all_mouse_exited"]

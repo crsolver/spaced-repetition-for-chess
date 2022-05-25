@@ -1,0 +1,230 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/game.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/reviewer.gd" type="Script" id=2]
+[ext_resource path="res://themes/theme.tres" type="Theme" id=3]
+[ext_resource path="res://fonts/Roboto-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 4 )
+
+[node name="reviewer" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="center" type="Node2D" parent="."]
+z_index = 1
+
+[node name="game" parent="center" instance=ExtResource( 1 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -255.0
+margin_top = -89.0
+margin_right = 255.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -17.0
+margin_bottom = 11.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/VBoxContainer"]
+margin_right = 510.0
+margin_bottom = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/CenterContainer"]
+margin_left = 222.0
+margin_right = 288.0
+margin_bottom = 50.0
+
+[node name="evaluationButtons" type="GridContainer" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
+visible = false
+margin_right = 223.0
+margin_bottom = 46.0
+columns = 4
+
+[node name="labelagain" type="Label" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons"]
+margin_right = 57.0
+margin_bottom = 19.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labelhard" type="Label" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons"]
+margin_left = 61.0
+margin_right = 111.0
+margin_bottom = 19.0
+text = "4 d"
+align = 1
+
+[node name="labelgood" type="Label" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons"]
+margin_left = 115.0
+margin_right = 169.0
+margin_bottom = 19.0
+text = "10d"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labeleasy" type="Label" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons"]
+margin_left = 173.0
+margin_right = 223.0
+margin_bottom = 19.0
+text = "15d"
+align = 1
+
+[node name="again" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons"]
+margin_top = 23.0
+margin_right = 57.0
+margin_bottom = 46.0
+text = "Again"
+
+[node name="hard" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons"]
+margin_left = 61.0
+margin_top = 23.0
+margin_right = 111.0
+margin_bottom = 46.0
+text = "Hard"
+
+[node name="good" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons"]
+margin_left = 115.0
+margin_top = 23.0
+margin_right = 169.0
+margin_bottom = 46.0
+text = "Good"
+
+[node name="easy" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons"]
+margin_left = 173.0
+margin_top = 23.0
+margin_right = 223.0
+margin_bottom = 46.0
+text = "Easy"
+
+[node name="reset" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
+margin_right = 66.0
+margin_bottom = 23.0
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
+margin_top = 27.0
+margin_right = 66.0
+margin_bottom = 50.0
+text = "Close"
+
+[node name="Control2" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+margin_bottom = 81.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -255.0
+margin_right = 255.0
+margin_bottom = 69.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_name" type="Label" parent="CanvasLayer/Control2/CenterContainer"]
+margin_left = 158.0
+margin_right = 351.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 1 )
+text = "
+London System"
+align = 1
+valign = 1
+
+[node name="end" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/end"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0313726, 0.0313726, 0.0196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/end"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -138.0
+margin_top = -20.0
+margin_right = 138.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/end/VBoxContainer"]
+margin_right = 293.0
+margin_bottom = 19.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/end/VBoxContainer/CenterContainer"]
+margin_right = 293.0
+margin_bottom = 19.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/end/VBoxContainer/CenterContainer/VBoxContainer"]
+margin_right = 293.0
+margin_bottom = 19.0
+text = "There are not more chess cards for today."
+align = 1
+
+[node name="endbutton" type="Button" parent="CanvasLayer/end/VBoxContainer"]
+margin_left = 109.0
+margin_top = 23.0
+margin_right = 183.0
+margin_bottom = 46.0
+size_flags_horizontal = 4
+text = "Go back"
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons/again" to="." method="_on_again_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons/hard" to="." method="_on_hard_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons/good" to="." method="_on_good_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/evaluationButtons/easy" to="." method="_on_easy_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/end/VBoxContainer/endbutton" to="." method="_on_endbutton_pressed"]

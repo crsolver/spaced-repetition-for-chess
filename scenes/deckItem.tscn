@@ -1,0 +1,119 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://themes/base_button.tres" type="StyleBox" id=2]
+[ext_resource path="res://scripts/deckItem.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.6, 0.6, 0.6, 0.164706 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 0.486275 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.729412, 0.729412, 0.729412, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 15
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=6]
+default_font = SubResource( 5 )
+Button/colors/font_color = Color( 0.780392, 0.807843, 0.764706, 1 )
+Button/colors/font_color_disabled = Color( 0.498039, 0.529412, 0.478431, 0.435294 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = ExtResource( 2 )
+Button/styles/focus = null
+Button/styles/hover = SubResource( 1 )
+Button/styles/normal = ExtResource( 2 )
+Button/styles/pressed = ExtResource( 2 )
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = SubResource( 2 )
+VScrollBar/styles/grabber_highlight = SubResource( 3 )
+VScrollBar/styles/grabber_pressed = SubResource( 4 )
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null
+
+[node name="deckItem" type="Control"]
+margin_right = 509.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 22 )
+mouse_filter = 2
+theme = SubResource( 6 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+margin_right = 509.0
+margin_bottom = 22.0
+mouse_filter = 2
+color = Color( 0.168627, 0.168627, 0.168627, 1 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 509.0
+margin_bottom = 22.0
+
+[node name="file_button" type="Button" parent="MarginContainer/HBoxContainer2"]
+margin_right = 300.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 300, 22 )
+hint_tooltip = "Name"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+text = "Openings"
+align = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer2"]
+margin_left = 486.0
+margin_right = 509.0
+margin_bottom = 22.0
+size_flags_horizontal = 5
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer2/HBoxContainer"]
+margin_right = 23.0
+margin_bottom = 22.0
+alignment = 2
+
+[node name="delete" type="Button" parent="MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer"]
+margin_right = 23.0
+margin_bottom = 22.0
+hint_tooltip = "Delete"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "x"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer2/file_button" to="." method="_on_file_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/delete" to="." method="_on_delete_pressed"]

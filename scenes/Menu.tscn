@@ -1,0 +1,722 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://themes/theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=2]
+[ext_resource path="res://sprites/white_king.png" type="Texture" id=3]
+[ext_resource path="res://sprites/black_king.png" type="Texture" id=4]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer"]
+margin_left = 177.0
+margin_top = 248.0
+margin_right = 333.0
+margin_bottom = 312.0
+alignment = 1
+
+[node name="white" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+margin_right = 76.0
+margin_bottom = 64.0
+icon = ExtResource( 3 )
+
+[node name="black" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+margin_left = 80.0
+margin_right = 156.0
+margin_bottom = 64.0
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VBoxContainer" parent="Control/CenterContainer"]
+margin_left = 222.0
+margin_top = 255.0
+margin_right = 288.0
+margin_bottom = 305.0
+theme = ExtResource( 1 )
+
+[node name="add" type="Button" parent="Control/CenterContainer/VSplitContainer"]
+margin_right = 66.0
+margin_bottom = 23.0
+text = "Add +"
+
+[node name="review" type="Button" parent="Control/CenterContainer/VSplitContainer"]
+margin_top = 27.0
+margin_right = 66.0
+margin_bottom = 50.0
+text = "Review"
+
+[node name="Control2" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -243.0
+margin_top = -235.0
+margin_right = 244.0
+margin_bottom = 219.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control2"]
+anchor_right = 1.0
+margin_top = -15.0
+margin_bottom = 6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control2/HBoxContainer2"]
+margin_top = 1.0
+margin_right = 300.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 300, 0 )
+text = "Studies"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control2/HBoxContainer2"]
+margin_left = 304.0
+margin_right = 487.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -219.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="ScrollContainer" parent="Control2/VBoxContainer"]
+margin_right = 487.0
+margin_bottom = 444.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2/VBoxContainer/MarginContainer"]
+margin_right = 487.0
+margin_bottom = 444.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -96.0
+margin_bottom = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 203.0
+margin_top = 11.0
+margin_right = 307.0
+margin_bottom = 88.0
+
+[node name="create" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_right = 104.0
+margin_bottom = 23.0
+theme = ExtResource( 1 )
+text = "Create study"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 27.0
+margin_right = 104.0
+margin_bottom = 50.0
+theme = ExtResource( 1 )
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 54.0
+margin_right = 104.0
+margin_bottom = 77.0
+theme = ExtResource( 1 )
+text = "Exit"
+
+[node name="Control3" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -122.0
+margin_top = -61.0
+margin_right = 122.0
+margin_bottom = 61.0
+color = Color( 0.0431373, 0.0470588, 0.0313726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Control3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control3/CenterContainer"]
+margin_left = 147.0
+margin_top = 240.0
+margin_right = 363.0
+margin_bottom = 319.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control3/CenterContainer/VBoxContainer"]
+margin_right = 216.0
+margin_bottom = 29.0
+
+[node name="Label" type="Label" parent="Control3/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 46.0
+margin_bottom = 24.0
+text = "Name:"
+
+[node name="create_LineEdit" type="LineEdit" parent="Control3/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 50.0
+margin_right = 216.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+max_length = 45
+
+[node name="Label" type="Label" parent="Control3/CenterContainer/VBoxContainer"]
+margin_top = 33.0
+margin_right = 216.0
+margin_bottom = 52.0
+text = "                                                      "
+
+[node name="CenterContainer" type="CenterContainer" parent="Control3/CenterContainer/VBoxContainer"]
+margin_top = 56.0
+margin_right = 216.0
+margin_bottom = 79.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control3/CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 48.0
+margin_right = 167.0
+margin_bottom = 23.0
+
+[node name="save_deck" type="Button" parent="Control3/CenterContainer/VBoxContainer/CenterContainer/HBoxContainer2"]
+margin_right = 51.0
+margin_bottom = 23.0
+text = "Save"
+
+[node name="cancel_create" type="Button" parent="Control3/CenterContainer/VBoxContainer/CenterContainer/HBoxContainer2"]
+margin_left = 55.0
+margin_right = 119.0
+margin_bottom = 23.0
+text = "Cancel"
+
+[node name="Control4" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0313726, 0.0313726, 0.0196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control4/CenterContainer"]
+margin_left = 221.0
+margin_top = 203.0
+margin_right = 289.0
+margin_bottom = 357.0
+
+[node name="Label" type="Label" parent="Control4/CenterContainer/VBoxContainer"]
+margin_right = 68.0
+margin_bottom = 19.0
+text = "Name"
+align = 1
+
+[node name="add_move" type="Button" parent="Control4/CenterContainer/VBoxContainer"]
+margin_top = 23.0
+margin_right = 68.0
+margin_bottom = 46.0
+text = "Add +"
+
+[node name="review_b" type="Button" parent="Control4/CenterContainer/VBoxContainer"]
+margin_top = 50.0
+margin_right = 68.0
+margin_bottom = 73.0
+text = "Review"
+
+[node name="explore_button" type="Button" parent="Control4/CenterContainer/VBoxContainer"]
+margin_top = 77.0
+margin_right = 68.0
+margin_bottom = 100.0
+text = "Explore"
+
+[node name="reset" type="Button" parent="Control4/CenterContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 68.0
+margin_bottom = 127.0
+text = "Restart"
+
+[node name="cancel" type="Button" parent="Control4/CenterContainer/VBoxContainer"]
+margin_top = 131.0
+margin_right = 68.0
+margin_bottom = 154.0
+text = "Cancel"
+
+[node name="config" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="config"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0313726, 0.0313726, 0.0196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="config"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="config/CenterContainer"]
+margin_left = 122.0
+margin_top = 88.0
+margin_right = 388.0
+margin_bottom = 471.0
+alignment = 1
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer"]
+margin_right = 266.0
+margin_bottom = 19.0
+text = "Reviews"
+
+[node name="GridContainer" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 23.0
+margin_right = 266.0
+margin_bottom = 52.0
+columns = 3
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer/GridContainer"]
+margin_top = 5.0
+margin_right = 162.0
+margin_bottom = 24.0
+text = "Maximum reviews/day"
+
+[node name="MarginContainer" type="MarginContainer" parent="config/CenterContainer/VBoxContainer/GridContainer"]
+margin_left = 166.0
+margin_right = 188.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="maxReviews" type="SpinBox" parent="config/CenterContainer/VBoxContainer/GridContainer"]
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 29.0
+min_value = 1.0
+max_value = 1000.0
+value = 200.0
+
+[node name="GridContainer3" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 56.0
+margin_right = 266.0
+margin_bottom = 85.0
+columns = 3
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer/GridContainer3"]
+margin_top = 5.0
+margin_right = 82.0
+margin_bottom = 24.0
+text = "Easy bonus"
+
+[node name="MarginContainer" type="MarginContainer" parent="config/CenterContainer/VBoxContainer/GridContainer3"]
+margin_left = 86.0
+margin_right = 188.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="easyBonus" type="SpinBox" parent="config/CenterContainer/VBoxContainer/GridContainer3"]
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 29.0
+min_value = 100.0
+max_value = 1000.0
+value = 130.0
+suffix = "%"
+
+[node name="GridContainer4" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 89.0
+margin_right = 266.0
+margin_bottom = 118.0
+columns = 3
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer/GridContainer4"]
+margin_top = 5.0
+margin_right = 115.0
+margin_bottom = 24.0
+text = "Interval modifier"
+
+[node name="MarginContainer2" type="MarginContainer" parent="config/CenterContainer/VBoxContainer/GridContainer4"]
+margin_left = 119.0
+margin_right = 188.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="intervalModi" type="SpinBox" parent="config/CenterContainer/VBoxContainer/GridContainer4"]
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 29.0
+max_value = 999.0
+value = 100.0
+suffix = "%"
+
+[node name="GridContainer5" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 122.0
+margin_right = 266.0
+margin_bottom = 151.0
+columns = 3
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer/GridContainer5"]
+margin_top = 5.0
+margin_right = 177.0
+margin_bottom = 24.0
+text = "Maximum interval (days)"
+
+[node name="MarginContainer2" type="MarginContainer" parent="config/CenterContainer/VBoxContainer/GridContainer5"]
+margin_left = 181.0
+margin_right = 188.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="maxInterval" type="SpinBox" parent="config/CenterContainer/VBoxContainer/GridContainer5"]
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 29.0
+min_value = 1.0
+max_value = 99999.0
+value = 36500.0
+
+[node name="GridContainer2" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 155.0
+margin_right = 266.0
+margin_bottom = 155.0
+columns = 3
+
+[node name="Label3" type="Label" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 159.0
+margin_right = 266.0
+margin_bottom = 178.0
+
+[node name="Label2" type="Label" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 182.0
+margin_right = 266.0
+margin_bottom = 201.0
+text = "New chess cards"
+
+[node name="GridContainer6" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 205.0
+margin_right = 266.0
+margin_bottom = 234.0
+columns = 3
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer/GridContainer6"]
+margin_top = 5.0
+margin_right = 152.0
+margin_bottom = 24.0
+text = "New chess cards/day"
+
+[node name="MarginContainer2" type="MarginContainer" parent="config/CenterContainer/VBoxContainer/GridContainer6"]
+margin_left = 156.0
+margin_right = 188.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="newCards" type="SpinBox" parent="config/CenterContainer/VBoxContainer/GridContainer6"]
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 29.0
+min_value = 1.0
+max_value = 9999.0
+value = 20.0
+
+[node name="GridContainer7" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 238.0
+margin_right = 266.0
+margin_bottom = 267.0
+columns = 3
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer/GridContainer7"]
+margin_top = 5.0
+margin_right = 184.0
+margin_bottom = 24.0
+text = "Graduating interval (days)"
+
+[node name="MarginContainer2" type="MarginContainer" parent="config/CenterContainer/VBoxContainer/GridContainer7"]
+margin_left = 188.0
+margin_right = 188.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="graduatingInterval" type="SpinBox" parent="config/CenterContainer/VBoxContainer/GridContainer7"]
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 29.0
+min_value = 1.0
+max_value = 99.0
+value = 1.0
+
+[node name="GridContainer8" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 271.0
+margin_right = 266.0
+margin_bottom = 300.0
+columns = 3
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer/GridContainer8"]
+margin_top = 5.0
+margin_right = 139.0
+margin_bottom = 24.0
+text = "Easy interval (days)"
+
+[node name="MarginContainer2" type="MarginContainer" parent="config/CenterContainer/VBoxContainer/GridContainer8"]
+margin_left = 143.0
+margin_right = 188.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="easyInterval" type="SpinBox" parent="config/CenterContainer/VBoxContainer/GridContainer8"]
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 29.0
+min_value = 1.0
+max_value = 99.0
+value = 4.0
+
+[node name="GridContainer9" type="GridContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 304.0
+margin_right = 266.0
+margin_bottom = 333.0
+columns = 3
+
+[node name="Label" type="Label" parent="config/CenterContainer/VBoxContainer/GridContainer9"]
+margin_top = 5.0
+margin_right = 93.0
+margin_bottom = 24.0
+text = "Starting ease"
+
+[node name="MarginContainer2" type="MarginContainer" parent="config/CenterContainer/VBoxContainer/GridContainer9"]
+margin_left = 97.0
+margin_right = 188.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="startingEase" type="SpinBox" parent="config/CenterContainer/VBoxContainer/GridContainer9"]
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 29.0
+min_value = 131.0
+max_value = 999.0
+value = 250.0
+suffix = "%"
+
+[node name="Label4" type="Label" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 337.0
+margin_right = 266.0
+margin_bottom = 356.0
+
+[node name="GridContainer10" type="HBoxContainer" parent="config/CenterContainer/VBoxContainer"]
+margin_top = 360.0
+margin_right = 266.0
+margin_bottom = 383.0
+alignment = 1
+
+[node name="opt_save" type="Button" parent="config/CenterContainer/VBoxContainer/GridContainer10"]
+margin_left = 73.0
+margin_right = 124.0
+margin_bottom = 23.0
+text = "Save"
+
+[node name="opt_cancel" type="Button" parent="config/CenterContainer/VBoxContainer/GridContainer10"]
+margin_left = 128.0
+margin_right = 192.0
+margin_bottom = 23.0
+text = "Cancel"
+
+[node name="DeletePopUp" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="DeletePopUp"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -158.0
+margin_top = -38.0
+margin_right = 157.0
+margin_bottom = 39.0
+color = Color( 0.121569, 0.121569, 0.121569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="DeletePopUp"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DeletePopUp/CenterContainer"]
+margin_left = 105.0
+margin_top = 257.0
+margin_right = 405.0
+margin_bottom = 303.0
+
+[node name="delete_label" type="Label" parent="DeletePopUp/CenterContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 300, 0 )
+text = "Delete this file"
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DeletePopUp/CenterContainer/VBoxContainer"]
+margin_top = 23.0
+margin_right = 300.0
+margin_bottom = 46.0
+
+[node name="deleteF" type="Button" parent="DeletePopUp/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Delete"
+
+[node name="cancelDelete" type="Button" parent="DeletePopUp/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 152.0
+margin_right = 300.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+text = "Cancel"
+
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/white" to="." method="_on_white_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/black" to="." method="_on_black_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VSplitContainer/add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VSplitContainer/review" to="." method="_on_review_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/create" to="." method="_on_create_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="text_entered" from="Control3/CenterContainer/VBoxContainer/HBoxContainer/create_LineEdit" to="." method="_on_create_LineEdit_text_entered"]
+[connection signal="pressed" from="Control3/CenterContainer/VBoxContainer/CenterContainer/HBoxContainer2/save_deck" to="." method="_on_save_deck_pressed"]
+[connection signal="pressed" from="Control3/CenterContainer/VBoxContainer/CenterContainer/HBoxContainer2/cancel_create" to="." method="_on_cancel_create_pressed"]
+[connection signal="pressed" from="Control4/CenterContainer/VBoxContainer/add_move" to="." method="_on_add_move_pressed"]
+[connection signal="pressed" from="Control4/CenterContainer/VBoxContainer/review_b" to="." method="_on_review_b_pressed"]
+[connection signal="pressed" from="Control4/CenterContainer/VBoxContainer/explore_button" to="." method="_on_explore_button_pressed"]
+[connection signal="pressed" from="Control4/CenterContainer/VBoxContainer/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="config/CenterContainer/VBoxContainer/GridContainer10/opt_save" to="." method="_on_opt_save_pressed"]
+[connection signal="pressed" from="config/CenterContainer/VBoxContainer/GridContainer10/opt_cancel" to="." method="_on_opt_cancel_pressed"]
+[connection signal="pressed" from="DeletePopUp/CenterContainer/VBoxContainer/HBoxContainer/deleteF" to="." method="_on_deleteF_pressed"]
+[connection signal="pressed" from="DeletePopUp/CenterContainer/VBoxContainer/HBoxContainer/cancelDelete" to="." method="_on_cancelDelete_pressed"]
